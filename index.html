@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pavilioni</title>
+  <meta name="description" content="Pavilioni.">
+  <link rel="icon" type="image/webp" href="/images/icon.webp">
+  <!-- Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Emailjs sdk-->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!--  preloader, had lil fun -->
+  <div id="preloader" aria-hidden="true">
+    <span class="preloader-mark">Pavilioni</span>
+  </div>
+
+  <!-- navbar -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner container">
+      <a href="#home" class="navbar-logo" aria-label="Pavilioni Photography Studio">
+        <img src="/images/no background pavilioni.webp" alt="Pavilioni" class="logo-img">
+      </a>
+
+      <nav class="navbar-nav" id="primaryNav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" data-i18n="nav_home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav_about">About Us</a></li>
+          <li><a href="#gallery" class="nav-link" data-i18n="nav_gallery">Gallery</a></li>
+          <li><a href="#services" class="nav-link" data-i18n="nav_services">Services</a></li>
+          <li><a href="#photo-school" class="nav-link" data-i18n="nav_school">Photo School</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions">
+        <!-- lang switcer -->
+        <div class="lang-switch" id="langSwitch" role="group" aria-label="Language selector">
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <span class="lang-divider" aria-hidden="true">/</span>
+          <button type="button" class="lang-btn" data-lang="ka" aria-pressed="false">KA</button>
+        </div>
+
+        <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- mobile version -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile Primary">
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link" data-i18n="nav_home">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link" data-i18n="nav_about">About Us</a></li>
+        <li><a href="#gallery" class="mobile-nav-link" data-i18n="nav_gallery">Gallery</a></li>
+        <li><a href="#services" class="mobile-nav-link" data-i18n="nav_services">Services</a></li>
+        <li><a href="#photo-school" class="mobile-nav-link" data-i18n="nav_school">Photo School</a></li>
+        <li><a href="#booking" class="mobile-nav-link" data-i18n="nav_book">Book Now</a></li>
+        <li><a href="#contact" class="mobile-nav-link" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main id="top">
+
+    <!--- hero -->
+    <section class="hero" id="home">
+      <div class="hero-bg" style="background-image:url('/images/studio.16.webp');"></div>
+      <div class="hero-overlay"><img href="/images/no background pavilioni.webp"></div>
+      <div class="hero-content container">
+        <p class="eyebrow reveal" data-i18n="hero_eyebrow">Pavilioni</p>
+        <h1 class="hero-title reveal" data-i18n="hero_title">Your Idea, Our Place</h1>
+        <p class="hero-subtitle reveal" data-i18n="hero_subtitle">Ideal space for both commercial and personal photo and video productions.
+                                                                  You can create with our professional team or collaborate with the
+                                                                  photographer or videographer of your choice.</p>
+        <a href="#booking" class="btn btn-primary reveal" data-i18n="hero_cta">Book Now</a>
+      </div>
+    </section>
+
+    <!--  chvens shesaxeb  -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-image reveal">
+           <div class="about-carousel" id="aboutCarousel">
+            <div class="about-carousel-track">
+              <img src="/images/studio.7.webp" alt="Inside the Pavilioni photography studio" class="about-carousel-slide" loading="lazy">
+              <img src="/images/studio.9.webp" alt="Inside the Pavilioni photography studio" class="about-carousel-slide" loading="lazy">
+              <img src="/images/studio.15.webp" alt="Inside the Pavilioni photography studio" class="about-carousel-slide" loading="lazy">
+              <img src="/images/studio.12.webp" alt="Inside the Pavilioni photography studio" class="about-carousel-slide" loading="lazy">
+              <img src="/images/studio.1.webp" alt="Inside the Pavilioni photography studio" class="about-carousel-slide" loading="lazy">
+              <img src="/images/studio.2.webp" alt="Inside the Pavilioni photography studio" class="about-carousel-slide" loading="lazy">
+              <img src="/images/studio.3.webp" alt="Inside the Pavilioni photography studio" class="about-carousel-slide" loading="lazy">
+              <img src="/images/studio.4.webp" alt="Inside the Pavilioni photography studio" class="about-carousel-slide" loading="lazy">
+              <img src="/images/studio.5.webp" alt="Inside the Pavilioni photography studio" class="about-carousel-slide" loading="lazy">
+              </div>
+            <button type="button" class="about-carousel-arrow prev" id="aboutCarouselPrev" aria-label="Previous photo">&#10094;</button>
+            <button type="button" class="about-carousel-arrow next" id="aboutCarouselNext" aria-label="Next photo">&#10095;</button>
+            <div class="about-carousel-dots" id="aboutCarouselDots" role="tablist" aria-label="Studio photos"></div>
+        </div>
+        </div>
+        <div class="about-text">
+          <p class="eyebrow reveal" data-i18n="about_label">About Us</p>
+          <h2 class="section-title reveal" data-i18n="about_title">The Art of Photography, Perfected</h2>
+          <p class="reveal" data-i18n="about_p1">Pavilion is a modern photo studio and creative space in Kutaisi. 
+                                                The studio combines a professional environment, aesthetic interior, 
+                                                and a variety of services, providing the perfect setting to transform 
+                                                any idea into a modern and distinctive visual creation.  </p>
+          <div class="about-video reveal">
+             <iframe src="https://www.youtube.com/embed/51PyMHJ2SWk?si=pl24pDrkhVknw6qb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+          
+    </section>
+
+    <!-- galera -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <h2 class="section-title" data-i18n="gallery_title">Gallery</h2>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+
+          <figure class="gallery-item">
+            <img src="/images/portf.1.webp" alt="" loading="lazy"  >
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="/images/portf.10.webp" alt="" loading="lazy" >
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/portf20.webp" alt="" loading="lazy">
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/portf.8.webp" alt="" loading="lazy">
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/portf21.webp" alt="" loading="lazy">
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/portf.2.webp" alt="" loading="lazy">
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/portf.11.webp" alt="" loading="lazy">
+          </figure>
+        
+          <figure class="gallery-item">
+            <img src="images/portf.6.webp" alt="" loading="lazy">
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/portf.16.webp" alt="" loading="lazy">
+          </figure>
+
+          <figure class="gallery-item" >
+            <img src="images/portf.17.webp" alt="" loading="lazy">
+          </figure>
+
+          <figure class="gallery-item" >
+            <img src="images/portf24.webp" alt="" loading="lazy">
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="images/portf.14.webp" alt="" loading="lazy">
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- lightboxz  -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+      <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#10094;</button>
+      <figure class="lightbox-figure">
+        <img src="" alt="" id="lightboxImg">
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+      <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#10095;</button>
+    </div>
+
+<!--servisebi-->
+<section class="services" id="services">
+     <div class="services-groups">
+          <div class="services-group reveal">
+            <h2 class="section-title" data-i18n="services_title">Our Services</h2>
+            
+            <div class="services-list">
+
+              <article class="service-row">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="5" y="14" width="38" height="26" rx="3"/><circle cx="24" cy="27" r="8"/><path d="M17 14l3-5h8l3 5"/></svg>
+                </div>
+                <div class="service-body">
+                  <h4 class="service-title" data-i18n="service_1_title">Studio Rental</h4>
+                  <div class="service-meta">
+                    <span data-i18n="service_1_meta1">1 hour · 80₾ — up to 8 people</span>
+                    <span data-i18n="service_1_meta2">1 hour · 150₾ — 8+ people</span>
+                  </div>
+                  <p class="service-desc" data-i18n="service_1_text">Lighting and decor</p>
+                </div>
+              </article>
+
+              <article class="service-row">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="18" cy="26" r="10"/><circle cx="30" cy="26" r="10"/></svg>
+                </div>
+                <div class="service-body">
+                  <h4 class="service-title" data-i18n="service_2_title">Wedding Shooting</h4>
+                  <div class="service-meta">
+                    <span data-i18n="service_2_meta">2 hours · 350₾ — up to 10 people</span>
+                  </div>
+                  <p class="service-desc" data-i18n="service_2_text">Lighting and wedding decor.</p>
+                </div>
+              </article>
+
+              <article class="service-row">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="18" y="6" width="12" height="22" rx="6"/><path d="M12 22a12 12 0 0 0 24 0"/><path d="M24 34v8M17 42h14"/></svg>
+                </div>
+                <div class="service-body">
+                  <h4 class="service-title" data-i18n="service_3_title">Podcast Space (coming soon...)</h4>
+                  <div class="service-meta">
+                    <span data-i18n="service_3_meta">1 hour · 150₾ — up to 3 people</span>
+                  </div>
+                  <p class="service-desc" data-i18n="service_3_text">Space, sound, lighting, filming and material transcription.</p>
+                </div>
+              </article>
+            </div>
+            <div class="services-group reveal">
+            <h3 class="services-group-title" data-i18n="services_group_2_title">Photography Services — Giorgi Tsaava</h3>
+            <div class="services-list">
+
+              <article class="service-row">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="18" cy="26" r="10"/><circle cx="30" cy="26" r="10"/></svg>
+                </div>
+                <div class="service-body">
+                  <h4 class="service-title" data-i18n="service_4_title">Wedding Session</h4>
+                  <div class="service-meta">
+                    <span data-i18n="service_4_meta">2 hours · 1000₾</span>
+                  </div>
+                  <p class="service-desc" data-i18n="service_4_text">Space, lighting and décor arranged for your day.</p>
+                </div>
+              </article>
+
+              <article class="service-row">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="18" r="8"/><path d="M9 41c2-9 8-14 15-14s13 5 15 14"/></svg>
+                </div>
+                <div class="service-body">
+                  <h4 class="service-title" data-i18n="service_5_title">Personal session / Portfolio</h4>
+                  <div class="service-meta">
+                    <span data-i18n="service_5_meta">2 hours · 1300₾</span>
+                  </div>
+                  <p class="service-desc" data-i18n="service_5_text">Space, lighting, styling and wardrobe guidance, makeup.</p>
+                </div>
+              </article>
+
+              <article class="service-row">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="17" cy="16" r="6"/><path d="M6 41c1.5-7 5.5-11 11-11s9.5 4 11 11"/><circle cx="33" cy="19" r="5"/><path d="M25 41c1-6 4-9.5 8-9.5s7 3.5 8 9.5"/></svg>
+                </div>
+                <div class="service-body">
+                  <h4 class="service-title" data-i18n="service_6_title">Family Session</h4>
+                  <div class="service-meta">
+                    <span data-i18n="service_6_meta">1 hour · 600₾</span>
+                  </div>
+                  <p class="service-desc" data-i18n="service_6_text">Space, lighting and makeup included.</p>
+                </div>
+                
+              </article>
+
+              <article class="service-row">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="17" cy="16" r="6"/><path d="M6 41c1.5-7 5.5-11 11-11s9.5 4 11 11"/><circle cx="33" cy="19" r="5"/><path d="M25 41c1-6 4-9.5 8-9.5s7 3.5 8 9.5"/></svg>
+                </div>
+                <div class="service-body">
+                  <h4 class="service-title" data-i18n="service_7_title">Video shoot</h4>
+                  <div class="service-meta">
+                    <span data-i18n="service_7_meta">4 Reels · 350₾</span>
+                  </div>
+                  <p class="service-desc" data-i18n="service_7_text">Trending videos, social media content creation, video editing, and color grading.</p>
+                </div>
+                
+              </article>
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- photo schoool -->
+    <section class="photo-school" id="photo-school">
+      <div class="container school-grid">
+        <div class="school-text">
+          <p class="eyebrow reveal" data-i18n="school_label">Photo School</p>
+          <h2 class="section-title reveal" data-i18n="school_title">Giorgi Tsaava's Photo School</h2>
+          <p class="reveal" data-i18n="school_p1">Giorgi Tsaava is a professional photographer with over 20 years of experience. Throughout his career, he has worked on projects such as “Dancing with the Stars”, “The Voice”, “Georgia’s Star”, “MasterChef”, and many others. </p>
+          <p class="reveal" data-i18n="school_p2">Today, Giorgi Tsaava shares his knowledge and experience with photography enthusiasts. Through his photography school in Kutaisi, he creates new opportunities for those interested in photography and passes on his professional expertise to the next generation. </p>
+          <p class="reveal" data-i18n="school_p">Giorgi Tsaava’s photography lecture series combines professional knowledge with practical experience. During the course, participants will learn the fundamental principles of photography and explore both artistic and studio photography. </p>
+          <p class="reveal" data-i18n="school_p4">The program includes practical studio lessons as well as outdoor photography sessions, allowing participants to develop their skills through real-world experience. </p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_v7ho_mM5dRQP7cRyWGpV-y7cCmFT52Wkf_kwbwxpB7vJSw/viewform" class="but but-primary" data-i18n="school_cta" target="_blank" rel="noopener">Registration</a>
+        </div>
+        <div class="school-image reveal">
+          <img src="images/gio.webp" alt="Pavilioni Photo School class in session" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- buqingi -->
+    <section class="booking" id="booking">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <p class="eyebrow" data-i18n="booking_label">Reservations</p>
+          <h2 class="section-title" data-i18n="booking_title">Book Your Session</h2>
+        </div>
+
+        <form id="bookingForm" class="booking-form reveal" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fieldName" data-i18n="form_name">Full Name</label>
+              <input type="text" id="fieldName" name="user_name" required>
+            </div>
+            <div class="form-group">
+              <label for="fieldEmail" data-i18n="form_email">Email Address</label>
+              <input type="email" id="fieldEmail" name="user_email" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fieldPhone" data-i18n="form_phone">Phone Number</label>
+              <input type="tel" id="fieldPhone" name="user_phone" required>
+            </div>
+            <div class="form-group">
+              <label for="fieldService" data-i18n="form_service">Select Service</label>
+              <select id="fieldService" name="service" required>
+                <option value="" data-i18n="form_service">Select Service</option>
+                <option value="Studio Rental" data-i18n="service_1_title">Studio Rental</option>
+                <option value="Wedding Photography" data-i18n="service_2_title">Wedding Photography</option>
+                <option value="Wedding Session" data-i18n="service_4_title">Wedding Session</option>
+                <option value="Family session" data-i18n="service_6_title">Family session</option>
+                <option value="Video shoot" data-i18n="service_7_title">Video shoot</option>
+                <option value="Personal session/Portfolio" data-i18n="service_5_title">Personal session/Portfolio</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fieldDate" data-i18n="form_date">Preferred Date</label>
+              <input type="date" id="fieldDate" name="preferred_date" required>
+            </div>
+            <div class="form-group">
+              <label for="fieldTime" data-i18n="form_time">Preferred Time</label>
+              <input type="time" id="fieldTime" name="preferred_time" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fieldMessage" data-i18n="form_message">Your Message</label>
+            <textarea id="fieldMessage" name="message" rows="5"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit" id="formSubmitBtn">
+            <span data-i18n="form_submit">Send Request</span>
+          </button>
+
+          <!-- Feedback messages, js -->
+          <p class="form-feedback form-success" id="formSuccess" role="status" data-i18n="form_success">Thank you! Your booking request has been sent successfully. We will contact you shortly</p>
+          <p class="form-feedback form-error" id="formError" role="alert" data-i18n="form_error">Something went wrong. Please try again or contact us directly.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- kontakti -->
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2 class="section-title reveal" data-i18n="contact_title">Contact Us</h2>
+          <ul class="contact-list reveal">
+            <li>
+              <span class="contact-item-label" data-i18n="contact_address_label">Address</span>
+              <span class="contact-item-value" data-i18n="contact_address_value">E. Rozevich St. 6, Kutaisi, Georgia, 4600</span>
+            </li>
+            <li>
+              <span class="contact-item-label" data-i18n="contact_phone_label">Phone</span>
+              <span class="contact-item-value">+995 590 90 55 03</span>
+            </li>
+            <li>
+              <span class="contact-item-label" data-i18n="contact_email_label">Email</span>
+              <span class="contact-item-value">info@pavilioni.ge</span>
+            </li>
+            <li>
+              <span class="contact-item-label" data-i18n="contact_hours_label">Working Hours</span>
+              <span class="contact-item-value" data-i18n="contact_hours_value">24/7</span>
+            </li>
+          </ul>
+
+          <div class="social-icons reveal">
+            <a href="https://www.instagram.com/pavilioni_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </a>
+            <a href="https://www.facebook.com/share/1BvjXk9Mdo/?mibextid=wwXIfr" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 21v-8h3l.5-3.4H14V7.5c0-1 .5-1.9 2.1-1.9H18V2.3S16.6 2 15.2 2c-2.8 0-4.7 1.7-4.7 4.8v2.8H7.5V13H10.5v8"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@pavilioni?_r=1&_t=ZS-98ZzDk2BaJY" class="social-icon" aria-label="TikTok" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 4v10.5a3.5 3.5 0 11-3-3.46"/><path d="M14 4c.5 2.5 2 4 5 4.2"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@Pavilioni%E1%83%9E%E1%83%90%E1%83%95%E1%83%98%E1%83%9A%E1%83%98%E1%83%9D%E1%83%9C%E1%83%98" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M10.5 9.5l4.5 2.5-4.5 2.5v-5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/pavilioni-%E2%80%A2-%E1%83%9E%E1%83%90%E1%83%95%E1%83%98%E1%83%9A%E1%83%98%E1%83%9D%E1%83%9C%E1%83%98/posts/?feedView=all" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 9.55005C12.9181 8.61327 14.1121 8 15.501 8C18.5385 8 21.001 10.4624 21.001 13.5V21H19.001V13.5C19.001 11.567 17.434 10 15.501 10C13.568 10 12.001 11.567 12.001 13.5V21H10.001V8.5H12.001V9.55005ZM5.00098 6.5C4.17255 6.5 3.50098 5.82843 3.50098 5C3.50098 4.17157 4.17255 3.5 5.00098 3.5C5.8294 3.5 6.50098 4.17157 6.50098 5C6.50098 5.82843 5.8294 6.5 5.00098 6.5ZM4.00098 8.5H6.00098V21H4.00098V8.5Z"></path></svg>
+          </a>
+          </div>
+        </div>
+
+        <div class="contact-map reveal">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1031.2981036364947!2d42.7080219696835!3d42.26555339066535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x839aa715383aed67%3A0xde3e14a6166df096!2zUGF2aWxpb25pIOKAoiDhg57hg5Dhg5Xhg5jhg5rhg5jhg53hg5zhg5g!5e1!3m2!1sen!2sge!4v1785707640597!5m2!1sen!2sge" 
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--  fexi  -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="/images/no background pavilioni.webp" alt="Pavilioni" class="footer-logo">
+        
+      </div>
+
+      <div class="footer-links">
+        <h4 data-i18n="footer_links_title">Quick Links</h4>
+        <ul>
+          <li><a href="#home" data-i18n="nav_home">Home</a></li>
+          <li><a href="#about" data-i18n="nav_about">About Us</a></li>
+          <li><a href="#gallery" data-i18n="nav_gallery">Gallery</a></li>
+          <li><a href="#services" data-i18n="nav_services">Services</a></li>
+          <li><a href="#photo-school" data-i18n="nav_school">Photo School</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4 data-i18n="footer_social_title">Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/pavilioni_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="https://www.facebook.com/share/1BvjXk9Mdo/?mibextid=wwXIfr" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 21v-8h3l.5-3.4H14V7.5c0-1 .5-1.9 2.1-1.9H18V2.3S16.6 2 15.2 2c-2.8 0-4.7 1.7-4.7 4.8v2.8H7.5V13H10.5v8"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@pavilioni?_r=1&_t=ZS-98ZzDk2BaJY" class="social-icon" aria-label="TikTok" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 4v10.5a3.5 3.5 0 11-3-3.46"/><path d="M14 4c.5 2.5 2 4 5 4.2"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@Pavilioni%E1%83%9E%E1%83%90%E1%83%95%E1%83%98%E1%83%9A%E1%83%98%E1%83%9D%E1%83%9C%E1%83%98" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M10.5 9.5l4.5 2.5-4.5 2.5v-5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/pavilioni-%E2%80%A2-%E1%83%9E%E1%83%90%E1%83%95%E1%83%98%E1%83%9A%E1%83%98%E1%83%9D%E1%83%9C%E1%83%98/posts/?feedView=all" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 9.55005C12.9181 8.61327 14.1121 8 15.501 8C18.5385 8 21.001 10.4624 21.001 13.5V21H19.001V13.5C19.001 11.567 17.434 10 15.501 10C13.568 10 12.001 11.567 12.001 13.5V21H10.001V8.5H12.001V9.55005ZM5.00098 6.5C4.17255 6.5 3.50098 5.82843 3.50098 5C3.50098 4.17157 4.17255 3.5 5.00098 3.5C5.8294 3.5 6.50098 4.17157 6.50098 5C6.50098 5.82843 5.8294 6.5 5.00098 6.5ZM4.00098 8.5H6.00098V21H4.00098V8.5Z"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="footerYear"></span> Pavilioni Photography Studio. <span data-i18n="footer_rights">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
