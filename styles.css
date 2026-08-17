@@ -26,19 +26,20 @@
 }
 
 @font-face {
-    font-family: 'ALK Rounded Mtav Med', 'Fredoka', Georgia, sans-serif;
-    src: url("/font/alkroundedmtav-medium.otf");
+    font-family: 'ALK Rounded Mtav Med';
+    src: url("font/alkroundedmtav-medium.otf") format("opentype");
+    font-display: swap;
 }
 
 body {
-    font-family: "ALK Rounded Mtav Med", sans-serif;
+    font-family: "ALK Rounded Mtav Med",'Fredoka', Georgia, sans-serif;
 }
 
 
 
 @font-face {
   font-family: 'ALK Rounded Mtav Med';
-  src: url(/font/alkroundedmtav-medium.otf) format('opentype');
+  src: url(font/alkroundedmtav-medium.otf) format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
