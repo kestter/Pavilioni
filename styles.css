@@ -229,7 +229,7 @@ h1, h2, h3, h4 {
 #preloader.loaded { opacity: 0; visibility: hidden; }
 
 .preloader-mark {
-  font-family: var(--font-display);
+  font-family: 'ALK Rounded Mtav Med';
   letter-spacing: 0.4em;
   font-size: 1.1rem;
   opacity: 0;
