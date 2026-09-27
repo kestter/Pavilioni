@@ -14,6 +14,27 @@ const translations = {
     hero_subtitle: "Ideal space for both commercial and personal photo and video productions. You can create with our professional team or collaborate with the photographer or videographer of your choice. ",
     hero_cta: "Book Now",
 
+    nav_news: "News",
+    news_title: "Latest News",
+    news_cat_all: "All",
+    news_cat_studio: "Studio",
+    news_cat_school: "Photo School",
+    news_cat_offers: "Offers",
+    news_cat_video: "Event",
+    news_cat_exhibition: "Exhibition",
+    news_1_title: "New Photo School Group",
+    news_1_text: "Giorgi Tsaava’s lecture series opens registration for a new group. The course covers artistic and studio photography, with practical lessons and outdoor shoots.",
+    news_author_name: "Giorgi Tsaava",
+    news_author_role: "Photographer",
+    news_2_title: "Podcast Space Now Available",
+    news_2_text: "You can now rent the podcast space at Pavilioni for your own content creation. The space includes professional sound, lighting, and filming equipment.",
+    news_3_title: "Exhibition as Part of the Caravan Art Forum",
+    news_3_text: "On September 16, as part of the Caravan Art Forum, an exhibition featuring the works of students from Giorgi Tsaava’s Photography School was held at Pavilioni Photography Studio. The exhibition was attended by participants of the Caravan Art Forum from various countries. International guests viewed the works of Georgian students, discovered their creative perspectives, and explored the stories they created through photography.",
+    news_number_label: "Upcoming Events...",
+    news_number_text: "No events scheduled",
+    news_4_title: "Sunday Brunch at Pavilioni",
+    news_4_text: "On 12th of September, there was a delightful Sunday brunch at Pavilioni, where guests enjoyed delicious food from \"Tuta\" and engaging conversations.",
+
     about_label: "About Us",
     about_title: "The Art of Photography, Perfected",
     about_p1: "Pavilion is a modern photo studio and creative space in Kutaisi. The studio combines a professional environment, aesthetic interior, and a variety of services, providing the perfect setting to transform any idea into a modern and distinctive visual creation. ",
@@ -100,6 +121,26 @@ const translations = {
     hero_title: "შენი იდეა, ჩვენი სივრცე",
     hero_subtitle: "იდეალური სივრცე კომერციული ან პირადი ხასიათის ფოტო-ვიდეო გადაღებების დასაგეგმად, ჩვენს გუნდთან ან თქვენთვის სასურველ სხვა ფოტოგრაფთან/ვიდეოგრაფთან ერთად.",
     hero_cta: "დაჯავშნა",
+
+    nav_news: "სიახლეები",
+    news_title: "სიახლეები",
+    news_cat_all: "ყველა",
+    news_cat_school: "ფოტოსკოლა",
+    news_cat_offers: "შეთავაზებები",
+    news_cat_video: "ღონისძიება",
+    news_cat_exhibition: "გამოფენა",
+    news_1_title: "ფოტოსკოლის ახალი ჯგუფი",
+    news_1_text: "გიორგი ცაავას ლექციათა სერიაზე ახალი ჯგუფის რეგისტრაცია დაიწყო. კურსი მოიცავს მხატვრულ და სტუდიურ ფოტოგრაფიას, პრაქტიკულ გაკვეთილებსა და გასვლით გადაღებებს.",
+    news_author_name: "გიორგი ცაავა",
+    news_author_role: "ფოტოგრაფი",
+    news_2_title: "პოდკასტის სივრცე უკვე ხელმისაწვდომია",
+    news_2_text: "პავილიონში უკვე შესაძლებელია პოდკასტის სივრცის დაქირავება თქვენი კონტენტის შესაქმნელად. სივრცე მოიცავს პროფესიონალურ ხმის, განათების და გადაღების აღჭურვილობას.",
+    news_3_title: "გამოფენა ქარავან არტ ფორუმის ფარგლებში",
+    news_3_text: "16 სექტემბერს, ქარავან არტ ფორუმის ფარგლებში, ფოტოსტუდია „პავილიონში“ გიორგი ცაავას ფოტოსკოლის სტუდენტების ნამუშევრების გამოფენა გაიმართა. გამოფენას სხვადასხვა ქვეყნიდან ჩამოსული ქარავან არტ ფორუმის მონაწილეები ესწრებოდნენ. საერთაშორისო სტუმრებმა დაათვალიერეს ქართველი სტუდენტების ნამუშევრები, გაეცნენ მათ შემოქმედებით ხედვას და ფოტოგრაფიის მიმართულებით შექმნილ ისტორიებს.",
+    news_number_label: "მომავალი ღონისძიებები...",
+    news_number_text: "მომავალი ღონისძიებები არ არის დაგეგმილი",
+    news_4_title: "პავილიონში კვირის ბრანჩი",
+    news_4_text: "12 სექტემბერს, პავილიონში სასიამოვნო საკვირაო ბრანჩი გაიმართა, სადაც სტუმრებმა \"თუთას\" უგემრიელესი კერძები მიირთვეს სასიამოვნო საუბრებსა და ლამაზ გარემოში.",
 
     about_label: "ჩვენ შესახებ",
     about_title: "ფოტოგრაფიის ხელოვნება სრულყოფილებამდე",
@@ -270,15 +311,16 @@ function initActiveNavLink() {
 
 /*about karuseli*/
 
-function initAboutCarousel() {
-  const root = document.getElementById("aboutCarousel");
-  if (!root) return;
+function initCarousels() {
+  document.querySelectorAll(".about-carousel").forEach(initCarousel);
+}
 
+function initCarousel(root) {
   const track = root.querySelector(".about-carousel-track");
   const slides = Array.from(track.children);
-  const dotsWrap = document.getElementById("aboutCarouselDots");
-  const prevBtn = document.getElementById("aboutCarouselPrev");
-  const nextBtn = document.getElementById("aboutCarouselNext");
+  const dotsWrap = root.querySelector(".about-carousel-dots");
+  const prevBtn = root.querySelector(".about-carousel-arrow.prev");
+  const nextBtn = root.querySelector(".about-carousel-arrow.next");
 
   if (slides.length <= 1) {
     if (prevBtn) prevBtn.hidden = true;
@@ -363,7 +405,6 @@ function initAboutCarousel() {
 
   render(false);
 }
-
 
 
 
@@ -527,7 +568,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
   initMobileMenu();
   initActiveNavLink();
-  initAboutCarousel();
+  initCarousels();
   initLightbox();
   initBookingForm();
   initFooterYear();
