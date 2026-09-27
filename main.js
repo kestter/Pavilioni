@@ -3,6 +3,7 @@ const translations = {
   en: {
     nav_home: "Home",
     nav_about: "About Us",
+    nav_news: "News",
     nav_gallery: "Gallery",
     nav_services: "Services",
     nav_school: "Photo School",
@@ -87,6 +88,7 @@ const translations = {
 
   ka: {
     nav_home: "მთავარი",
+    nav_news: "სიახლეები",
     nav_about: "ჩვენ შესახებ",
     nav_gallery: "გალერეა",
     nav_services: "სერვისები",
