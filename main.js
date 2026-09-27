@@ -32,8 +32,8 @@ const translations = {
     news_3_text: "On September 16, as part of the Caravan Art Forum, an exhibition featuring the works of students from Giorgi Tsaava’s Photography School was held at Pavilioni Photography Studio. The exhibition was attended by participants of the Caravan Art Forum from various countries. International guests viewed the works of Georgian students, discovered their creative perspectives, and explored the stories they created through photography.",
     news_number_label: "Upcoming Events...",
     news_number_text: "No events scheduled",
-    news_4_title: "Sunday Brunch at Pavilioni",
-    news_4_text: "On 12th of September, there was a delightful Sunday brunch at Pavilioni, where guests enjoyed delicious food from \"Tuta\" and engaging conversations.",
+    news_4_title: "September 12 | Social Evening",
+    news_4_text: "On September 12, Pavilioni brought together music, flavors, and people in one space. The dishes from Café Tuta, the lively atmosphere, and relaxed conversations created an evening that became a space for meeting and making new connections.",
 
     about_label: "About Us",
     about_title: "The Art of Photography, Perfected",
@@ -139,8 +139,8 @@ const translations = {
     news_3_text: "16 სექტემბერს, ქარავან არტ ფორუმის ფარგლებში, ფოტოსტუდია „პავილიონში“ გიორგი ცაავას ფოტოსკოლის სტუდენტების ნამუშევრების გამოფენა გაიმართა. გამოფენას სხვადასხვა ქვეყნიდან ჩამოსული ქარავან არტ ფორუმის მონაწილეები ესწრებოდნენ. საერთაშორისო სტუმრებმა დაათვალიერეს ქართველი სტუდენტების ნამუშევრები, გაეცნენ მათ შემოქმედებით ხედვას და ფოტოგრაფიის მიმართულებით შექმნილ ისტორიებს.",
     news_number_label: "მომავალი ღონისძიებები...",
     news_number_text: "მომავალი ღონისძიებები არ არის დაგეგმილი",
-    news_4_title: "პავილიონში კვირის ბრანჩი",
-    news_4_text: "12 სექტემბერს, პავილიონში სასიამოვნო საკვირაო ბრანჩი გაიმართა, სადაც სტუმრებმა \"თუთას\" უგემრიელესი კერძები მიირთვეს სასიამოვნო საუბრებსა და ლამაზ გარემოში.",
+    news_4_title: "12 სექტემბერი | სოციალური საღამო",
+    news_4_text: "12 სექტემბერს პავილიონმა ერთ სივრცეში მუსიკა, გემო და ადამიანები გააერთიანა. კაფე თუთას კერძებმა, ცოცხალმა ატმოსფერომ და თავისუფალმა საუბრებმა შექმნა საღამო, რომელიც შეხვედრისა და ახალი ნაცნობობების სივრცედ იქცა.",
 
     about_label: "ჩვენ შესახებ",
     about_title: "ფოტოგრაფიის ხელოვნება სრულყოფილებამდე",
